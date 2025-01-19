@@ -1,0 +1,213 @@
+---
+# This is a comment in yml
+
+# An employee record
+name: John
+job: Software Developer
+skill: Coding
+employed: True
+foods:
+  - Apple
+  - Orange
+  - Strawberry
+  - Mango
+languages:
+  java: Intermediate
+  python: Advanced
+  javaScript: Advanced
+education: |
+  2 GCSEs
+  2 A-Levels
+  Bsc. in Computer Science
+  MSc. in Computer Engineering
+
+---
+ name: "Olamide"
+ address: "Lagos, Niger"
+ age: 30
+ is_working: True
+ certifications: 5
+ hobbies:
+   - research
+   - reading
+   - video_editing
+   - teaching
+ work_experience:
+   company_01:
+     years: 2
+     role: "Junior Software Developer"
+   company_02:
+     years: 3
+     role: "Senior Software Developer"
+   company_03:
+     year: 3
+     role: "Freelancing"
+ social_accounts:
+   facebook: 1
+   twitter: 1
+   youtube: 1
+   google: 1
+
+---
+cities:
+  - Ikeja
+  - Egbeda
+  - Apapa
+  - Obalende
+  - Yaba
+
+---
+companies:
+  - Microsoft
+  - AWS
+  - Globacom
+  - MTN NG
+
+---
+foo: True
+bar: False
+device1: On
+device2: Off
+isActive: Yes
+isEligible: No
+randon_key_1: True
+random_key_2: On
+random_key_3: Yes
+random_key_4: False
+random_key_5: Off
+random_key_6: No
+
+---
+list_01: [1, 2, 3, 4]
+list_02:
+  - 4
+  - 5
+  - 6
+  - 7
+list_03:
+  - "one"
+  - "two"
+  - "three"
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      name: http
+    - port: 443
+      name: https
+    - port: ~
+list_04:
+  - employee_01:
+      name: Vikram
+      age: 26
+      role: DevOps Engineer
+  - employee_02:
+      name: Steven
+  - employee_03:
+
+---
+programming_languages:
+  - Python
+  - JavaScript
+  - C
+  - HTML
+  - CSS
+libraries:
+  - React
+  - CSS
+
+---
+# List of Dictionaries
+programming_languages:
+- Python:
+    author: Guido van Rossum
+- JavaScript:
+    author: Brendan Eich
+- C:
+    author: Dennis Ritchie
+libraries:
+- React:
+    popularity: High
+- CSS:
+    popularity: High
+
+---
+# Set
+set_elements: !!set
+  ? 1
+  ? 2
+  ? 2
+  ? Vikram
+  ? DevOps
+  ? Vikram
+
+---
+name: ~
+age: null
+
+---
+# Block vs Flow
+color: 
+  - red
+  - yellow
+  - blue
+color:  [red, yellow, blue]
+data:
+  name: Vikram
+  age: 26
+data: { name: Vikram, age: 26 }
+
+--- 
+data_01:
+  name: Vikram
+  age: 26
+  role: DevOps_Engineer
+data_02: { name: Vikram, age: 26, role: DevOps_Engineer }
+data_03:
+  details: 
+    name: Vikram
+    age: 26
+    role: DevOps_Engineer
+  certifications:
+    - CKA
+    - CKAD
+    - CKS
+    - DCA
+
+---    
+string_with_fold: >-
+  This is vikram
+  and I work as
+  DevOps Engineer.
+string_with_pipe: |-
+  This is vikram
+  and I work as
+  DevOps Engineer.
+
+---
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: &restart_policy always
+    environment: &env_vars
+      app: webservice
+      env: production
+  mysql:
+    image: mysql:3.8
+    restart: *restart_policy
+    environment: *env_vars
+    
+---
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: &restart_policy always
+    environment: &env_vars
+      app: webservice
+      env: production
+  mysql:
+    image: mysql:3.8
+    restart: *restart_policy
+    environment: 
+      <<: *env_vars
+      type: database
