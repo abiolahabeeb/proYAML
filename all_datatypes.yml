@@ -70,7 +70,7 @@ device1: On
 device2: Off
 isActive: Yes
 isEligible: No
-randon_key_1: True
+random_key_1: True
 random_key_2: On
 random_key_3: Yes
 random_key_4: False
@@ -196,7 +196,7 @@ services:
     image: mysql:3.8
     restart: *restart_policy
     environment: *env_vars
-    
+
 ---
 services:
   wordpress:
